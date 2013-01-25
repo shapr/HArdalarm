@@ -1,0 +1,35 @@
+name:                HArdalarm
+-- The package version.  See the Haskell package versioning policy (PVP)
+-- for standards guiding when and how versions should be incremented.
+-- http://www.haskell.org/haskellwiki/Package_versioning_policy
+-- PVP summary:      +-+------- breaking API changes
+--                   | | +----- non-breaking API additions
+--                   | | | +--- code changes with no API change
+version:             0.0.0.1
+synopsis:            Haskell + Arduino alarm clock
+Description:
+                     HArdalarm 
+
+homepage:            http://github.com/shapr/HArdalarm/
+license:             GPL-3
+author:              Shae Erisson
+maintainer:          shae@ScannedInAvian.com
+category:            Utilities
+build-type:          Simple
+cabal-version:       >=1.8
+extra-source-files:  README.md
+
+executable hardalarm
+  main-is: Main.hs
+
+  build-depends:
+    base >= 4 && < 5,
+    unix >= 2.6,
+    datetime >= 0.2.1,
+    colour >= 2.3.3,
+    serial
+
+  hs-source-dirs:    src
+source-repository    head
+  type:              git
+  location:          http://github.com/shapr/HArdalarm
