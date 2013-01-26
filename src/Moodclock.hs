@@ -11,7 +11,7 @@ serialport = "/dev/ttyUSB0"
 
 mymain = do
      s <- openSerial serialport B9600 8 One NoParity NoFlowControl
-     let r = 255;g = 255; b = 255 -- ; sPut = setColor s
+     let r = 255;g = 255; b = 255
      hPutStr s "r5 b5 g0"
      hFlush s
      -- threadDelay 300000
